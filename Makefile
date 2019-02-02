@@ -27,7 +27,7 @@ define Package/uhub
   CATEGORY:=Network
   DEPENDS:=+libevent +libopenssl +libsqlite3
   TITLE:=High performance ADC hub
-  URL:=http://www.extatic.org/uhub/
+  URL:=http://www.uhub.org
 endef
 
 define Package/uhub/description
