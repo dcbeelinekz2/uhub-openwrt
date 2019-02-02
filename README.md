@@ -1,4 +1,7 @@
-# uhub-openwrt
+# UHUB OPENWRT
+
+µHub (micro-Hub) — ADC хаб написанный на C под лицензией GPLv3. Работает в операционных системах Linux, Windows, BSD и других. Имеет только базовую функциональность для p2p. Крайне нетребователен к ресурсам — при 350 пользователях занимает в памяти несколько десятков килобайт ОЗУ. Возможна работа на устройствах поддерживающих ПО OpenWRT.
+
 0.5.0:
 - Use TLS 1.2 and strong ciphers by default, but made this configurable.
 - Fix TLS event handling which caused some busy loops
