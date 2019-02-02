@@ -21,3 +21,6 @@
 - Fix crashing autotest due to wrong initialization of the usermanager.
 - mod_topic: check argument for NULL
 - rename !cleartopic to !resettopic
+
+
+https://downloads.openwrt.org/releases/
