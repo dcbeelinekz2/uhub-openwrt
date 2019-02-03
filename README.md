@@ -9,6 +9,7 @@ Advanced Direct Connect (ADC) — протокол для файлообменн
 
 Начиная с версии 3.2 поддерживает шифрование server-client, так называемую ADCS-mode. Начиная с версии 4.0 будет введена система плагинов с простым API. Тестовый хаб автора: adcs://adc.extatic.org:1511
 
+-----------------
 0.5.0:
 - Use TLS 1.2 and strong ciphers by default, but made this configurable.
 - Fix TLS event handling which caused some busy loops
@@ -30,4 +31,4 @@ Advanced Direct Connect (ADC) — протокол для файлообменн
 - rename !cleartopic to !resettopic
 
 
-https://downloads.openwrt.org/releases/
+Пакеты, прошивки https://downloads.openwrt.org/releases/
