@@ -1,4 +1,5 @@
 ## uHUB для LEDE|OPENWRT 
+Powered by uhub/0.5.0-git-444add1 on Linux/MIPS
 
 ![rafa центравой](https://pp.userapi.com/c847220/v847220549/198398/hA1GFMLHwAk.jpg)
 
