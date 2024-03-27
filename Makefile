@@ -25,7 +25,7 @@ define Package/uhub
   SUBMENU:=P2P
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+libevent +libopenssl +libsqlite3
+  DEPENDS:=+libevent2 +libopenssl +libsqlite3
   TITLE:=High performance ADC hub
   URL:=http://www.uhub.org
 endef
