@@ -1,21 +1,19 @@
 #
-# Copyright (C) 2009-2012 OpenWrt.org
+# Copyright (C) 2024 DCBEELINEKZ RAFA
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
 #
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=uhub
-PKG_VERSION:=0.5.0
-PKG_RELEASE:=4
+PKG_VERSION:=0.5.1
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-src.tar.gz
-PKG_SOURCE_URL:=https://github.com/janvidar/uhub
+PKG_SOURCE_URL:=https://github.com/dcbeelinekz2/uhub
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=90d05c9a19d3f72e3bdc89e4906c9e254e6a7f10
+PKG_SOURCE_VERSION:=a9db173fba5aef2bbd461d971ebaba018d863799
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 include $(INCLUDE_DIR)/package.mk
@@ -26,7 +24,7 @@ define Package/uhub
   SECTION:=net
   CATEGORY:=Network
   DEPENDS:=+libevent2 +libopenssl +libsqlite3
-  TITLE:=High performance ADC hub
+  TITLE:=High performance ADC hub. DCBEELINEKZ
   URL:=http://www.uhub.org
 endef
 
@@ -53,6 +51,9 @@ define Package/uhub/install
 	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/uhub/mod_chat_history.so $(1)/usr/lib/uhub/
 	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/uhub/mod_topic.so $(1)/usr/lib/uhub/
 	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/uhub/mod_auth_simple.so $(1)/usr/lib/uhub/
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/uhub.init $(1)/etc/init.d/uhub
+	$(INSTALL_BIN) ./files/motd.txt $(1)/etc/uhub/motd.txt
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/uhub/uhub.conf $(1)/etc/uhub/
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/uhub/plugins.conf $(1)/etc/uhub/
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/uhub/rules.txt $(1)/etc/uhub/
